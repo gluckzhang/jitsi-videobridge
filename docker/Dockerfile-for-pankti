@@ -1,0 +1,7 @@
+FROM openjdk:11.0.8-jdk-slim
+
+COPY ./jitsi-videobridge /home/jitsi-videobridge
+COPY ./glowroot /home/jitsi-videobridge/glowroot
+
+COPY ./jvb-for-pankti.sh /home/jitsi-videobridge/jvb.sh
+ENTRYPOINT ["/home/jitsi-videobridge/jvb.sh"]
